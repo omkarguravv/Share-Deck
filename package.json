@@ -2,8 +2,12 @@
   "name": "fileshare-2.0",
   "version": "1.0.0",
   "description": "",
+  "main": "server.js",
+  "engines": {
+    "node": "16.13.0"
+  },
   "scripts": {
-    "dev": "nodemon server.js",
+    "start": "nodemon server.js",
     "build-tail": "NODE_ENV=production tailwind build -i styles/tailwindcss.css -o assets/styles.css"
   },
   "keywords": [],
