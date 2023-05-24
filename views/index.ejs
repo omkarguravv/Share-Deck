@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="x-icon" href="/images/folder.png">
+    <title>Share Deck</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/style/index.css">
+
+</head>
+
+<body>
+
+
+
+    <div class="main-container-1">
+
+
+        <div class="main-container-2">
+
+            <div class="main-container-3">
+
+                <form id="form" action=" /upload" method="post" enctype="multipart/form-data">
+                    <div class="child-1">
+                        <input class="ip-file" type="file" id="file" name="file" required>
+                        <span id="drop-img" class="img">
+                            <img class="img-width " src="/images/folder.png" alt="file" draggable="false">
+                        </span>
+                        <label class="text-label" for="file">Drop Your File or,
+                            <span class="browse">Browse</span>
+                        </label>
+
+
+                        <label class="pass-label" for="password">Password:</label>
+                        <input class="pass-ip " type="password" id="password" placeholder="Password for file"
+                            name="password">
+
+                        <button type="submit"
+                            class="submit-btn ">
+                            <p>Download</p> <img class= "download-img " src="/images/inbox.png" alt="">
+                        </button>
+
+                    </div>
+
+                    <div>
+
+                    </div>
+
+                </form>
+
+                <% if(locals.fileLink !=null) { %>
+                    <div class=" mx-2 justify-center">
+                        <div class="flex w-65   h-10 bg-[#EFF5FE] items-center rounded-md text-black">
+                            <% if(locals.fileLink !=null) { %>
+                                <div class="w-5/6 mr-5">
+                                    <a class=" ml-0 md:ml-10 text-blue-700 hover:text-blue-800 text-xs md:text-sm"
+                                        id="text-link" href="<%= locals.fileLink %>">
+                                        <%= locals.fileLink %>
+                                    </a>
+                                </div>
+                                <% } %>
+
+                                    <button class=" w-1/6 float-right hover:scale-110 flex items-center justify-center"
+                                        aria-controls="content-to-copy" onclick="copyText()">Copy<img class="w-6"
+                                            src="/images/paste.png" alt=""></button>
+                                    <% } %>
+
+                        </div>
+
+
+                        <div
+                            class=" flex item-center justify-center font-light text-[#4294FF] text-sm md:text-2xl mt-10 md:mt-5 ">
+
+                            Made by&nbsp; <a target="_blank" class="underline font-semibold hover:text-blue-700"
+                                href="https://www.omkargurav.codes/">Omkar Gurav</a> &nbsp;|&nbsp; <a target="_blank"
+                                class="underline font-semibold  hover:text-blue-700"
+                                href="https://github.com/omkarguravv/Share-Deck">Github</a>
+                        </div>
+
+
+                    </div>
+
+
+
+
+            </div>
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+    <script>
+        //browse file
+        const dropImg = document.getElementById('drop-img');
+        const file = document.getElementById('file');
+        dropImg.addEventListener('click', () => {
+            file.click();
+        })
+
+        // progress bar with for loop to increase the value
+        for (let i = 0; i < 100; i++) {
+            document.getElementById('progress').style.width = i;
+        }
+
+        //copy link
+        function copyText() {
+            var textElement = document.getElementById("text-link");
+            var text = textElement.innerText || textElement.textContent;
+
+            navigator.clipboard.writeText(text)
+
+        }
+    </script>
+</body>
+
+</html>

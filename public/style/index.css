@@ -1,0 +1,122 @@
+body, html {
+    background: #eff5fe;
+}
+
+/* index.ejs css----------------------------- */
+
+.main-container-1 {
+    display: flex;
+    padding: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #eff5fe;
+
+
+    @media (min-width: 768px) {
+        padding: 2.5rem;
+    }
+
+}
+
+.main-container-2 {
+    padding: 1.25rem;
+    margin-top: 2.5rem;
+    background-color: #ffffff;
+    border-radius: 0.375rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+
+
+    @media (min-width: 768px) {
+        padding: 2.5rem;
+        width: 50%;
+    }
+
+}
+
+.main-container-3 {
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+    border-width: 2px;
+    border-style: dashed;
+    border-color: #4294FF;
+
+    @media (min-width: 768px) {
+        padding: 2.5rem;
+    }
+
+
+
+
+}
+
+.child-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.ip-file {
+    display: none;
+}
+
+.img:hover {
+    transform: scale(1.1);
+    transition: all .2s ease-in-out;
+}
+
+.img-width {
+    width: 5rem;
+}
+
+.text-label {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.browse {
+    color: #1d4ed8;
+    text-decoration: underline;
+}
+
+.pass-label {
+    margin-bottom: 0.5rem;
+    margin-top: 2.5rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.pass-ip {
+    display: block;
+    padding: 0.625rem;
+    background-color: #F9FAFB;
+    color: #111827;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    width: 50%;
+    border-radius: 0.5rem;
+    border-width: 1px;
+    border-color: #D1D5DB;
+}
+
+
+.submit-btn{
+    display: flex; 
+    margin-top: 1.25rem; 
+    justify-content: center; 
+    align-content: center; 
+    align-items: center; 
+    
+
+}
+
+.download-img{
+    margin-left: 0.5rem; 
+    width: 2.5rem; 
+}
+
+
+
+
+/* index.ejs css----------------------------- */
